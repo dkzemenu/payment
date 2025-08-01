@@ -1,16 +1,17 @@
-export type PaymentStatus = "PENDING" | "COMPLETED" | "FAILED" | "IN_PROGRESS";
+export type PaymentStatus = 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'FAILED';
+
 export interface Payment {
   id: string;
   amount: number;
   currency: string;
-  status: PaymentStatus;
-  createdAt: Date;
-  updatedAt: Date;
   recipientName: string;
-  recipentAccountNumber: string;
+  recipientAccountNumber: string;
+  status: PaymentStatus;
+  createdAt: string;
+  updatedAt: string;
   errorMessage?: string;
-  processingTime?: number; // in millisecond
-  retryCount?: number; // number of retries if applicable
+  processingTime?: number; // in milliseconds
+  retryCount: number;
 }
 
 export interface CreatePaymentRequest {
@@ -20,15 +21,17 @@ export interface CreatePaymentRequest {
   recipientName: string;
   recipientAccountNumber: string;
 }
-export interface PaymentAnaytics {
-  statusCount: Record<PaymentStatus, number>;
-  averageProcessingTime: number; // in milliseconds
+
+export interface PaymentAnalytics {
+  statusCounts: Record<PaymentStatus, number>;
+  averageProcessingTime: number;
+  currentTPS: number;
   totalPayments: number;
-  currentTPS: number; // Transactions Per Second
 }
+
 export interface RateLimitInfo {
-  currentTPS: number; // Current Transactions Per Second
-  maxTPS: number; // Maximum Transactions Per Second allowed
-  isNearLimit: boolean; // Whether the current TPS is near the limit
-  isAtLimit: boolean; // Whether the current TPS has reached the limit
-}
+  currentTPS: number;
+  maxTPS: number;
+  isNearLimit: boolean;
+  isAtLimit: boolean;
+} 

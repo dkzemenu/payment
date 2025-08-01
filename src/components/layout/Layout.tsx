@@ -13,7 +13,9 @@ export function Layout({ children, currentPage, onPageChange }: LayoutProps) {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <div className="flex">
-        <Sidebar currentPage={currentPage} onPageChange={onPageChange} />
+        <div className="w-64 flex-shrink-0">
+          <Sidebar currentPage={currentPage} onPageChange={onPageChange} />
+        </div>
         <main className="flex-1 p-6">{children}</main>
       </div>
     </div>

@@ -33,7 +33,7 @@ const mockPayments: Payment[] = [
   {
     id: "PAY-1703123456791-GHI789JKL",
     amount: 500.0,
-    currency: "BIRR",
+    currency: "ETB",
     recipientName: "Abebe Kebede",
     recipientAccountNumber: "1122334455",
     status: "PENDING",
