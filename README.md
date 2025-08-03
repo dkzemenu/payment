@@ -20,6 +20,35 @@ A modern, responsive payment processing dashboard built with React, TypeScript, 
 - **Error Handling**: Comprehensive error states and retry mechanisms
 - **Performance**: Optimized rendering and efficient data fetching
 
+## Screenshots
+
+### Dashboard Overview
+![Dashboard](./screenshots/dashboard.png)
+
+The main dashboard provides an overview of payment processing with key statistics cards and recent payment transactions. Features include:
+- Real-time payment statistics (Total, Completed, Pending, Failed)
+- Recent payments table with status indicators
+- Rate limit warnings for system monitoring
+
+### Payments Management
+![Payments](./screenshots/payments.png)
+
+The payments page allows users to manage and track payment orders with:
+- Payment submission form with validation
+- Searchable payment table
+- Status filtering and management
+- Real-time status updates
+
+### Analytics & Metrics
+![Analytics](./screenshots/analytics.png)
+
+The analytics page provides detailed insights into payment processing performance:
+- Processing time metrics
+- Current TPS (Transactions Per Second) monitoring
+- Success rate calculations
+- Payment status distribution charts
+
+
 ## Technology Stack
 
 - **Frontend**: React 18 with TypeScript
